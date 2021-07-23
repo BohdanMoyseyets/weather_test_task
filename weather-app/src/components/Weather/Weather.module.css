@@ -1,0 +1,26 @@
+.info{
+  width:100%;
+  border: 1px solid rgb(117 107 107 / 83%);
+  height: 250px;
+  margin-top: 25px;
+  padding: 20px;
+}
+.title{
+  font-size:18px;
+  color:rgb(117 107 107 / 83%);
+}
+.temp{
+  margin-top:25px;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+.desc{
+  margin-top: 15px;
+  font-size:35px;
+  font-weight: 500;
+  text-align: center;
+}
+.hide_option{
+  display:none!important;
+}
