@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setDataAC } from '../../redux/weather-reducer';
+import { setDataAC, setFetchingAC } from '../../redux/weather-reducer';
 import Weather from './Weather';
 
 let mapStateToProps = (state) =>{
@@ -8,13 +8,15 @@ let mapStateToProps = (state) =>{
         city: state.city.city,
         temp: state.weather.temp,
         desc: state.weather.desc,
-        haveInfo: state.weather.haveInfo
+        haveInfo: state.weather.haveInfo,
+        isFetching: state.weather.isFetching
     }
 }
 
 let mapDispatchToProps = (dispatch) => {
     return{
-        dataSet: (temp, desc, haveInfo ) => { dispatch(setDataAC(temp, desc, haveInfo)) }
+        dataSet: (temp, desc, haveInfo ) => { dispatch(setDataAC(temp, desc, haveInfo)) },
+        setFetching: (isFetching ) => { dispatch(setFetchingAC(isFetching)) }
     }
 }
 
